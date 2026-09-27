@@ -1,13 +1,11 @@
-import Creational_Design_Patterns.Factor_Patern.CryptoPayments;
-import Creational_Design_Patterns.Factor_Patern.PaymentFactory;
-import Creational_Design_Patterns.Factor_Patern.Payment_Type;
-import Creational_Design_Patterns.Factor_Patern.Payments;
+import Creational_Design_Patterns.Builder_Pattern.Car;
 
 public class Main {
     static void main() {
+        Car.CarBuilder builder = new Car.CarBuilder();
 
-        Payments payments = PaymentFactory.create(Payment_Type.Crypto);
+        Car newCar = builder.setCar_number(990).setTop_speed("300").build();
 
-        payments.Pay(22.2);
+        System.out.println(newCar);
     }
 }
